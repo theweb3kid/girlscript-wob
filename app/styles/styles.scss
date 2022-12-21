@@ -1,0 +1,52 @@
+.landing-overlay {
+	animation: landing-overlay 1.5s ease forwards;
+	@apply absolute top-0 left-0 z-0 w-full h-full select-none bg-black;
+}
+
+.text-animate-up {
+	@apply relative overflow-hidden leading-relaxed;
+	span {
+		transform: translateY(10rem);
+		animation: text-animate-up calc(0.33s * var(--index)) var(--easeOutExpo)
+			forwards;
+		animation-delay: 600ms;
+		@apply inline-block leading-relaxed cursor-default;
+	}
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fade-in 0.2s ease forwards var(--delay);
+}
+
+.rotate-scale-text {
+	transition: transform 0.2s var(--easeOutExpo);
+	@apply group-hover:-rotate-2;
+}
+
+@keyframes text-animate-up {
+	0% {
+		transform: rotate(5deg) skewY(15deg) translateY(10rem);
+	}
+	100% {
+		transform: rotate(0deg) skewY(0deg) translateY(0rem);
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes landing-overlay {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.75;
+	}
+}

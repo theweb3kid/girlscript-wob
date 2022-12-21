@@ -8,28 +8,38 @@ export default function Home() {
 	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
 	return (
 		<section className="relative grid min-h-screen overflow-hidden place-items-center">
-			<div className="z-[1] relative flex flex-col p-8 md:items-center items-start gap-4 max-w-[100vw] ">
+			<div className="z-[1] relative flex flex-col items-center gap-4">
 				<div
-					className="relative block md:h-[117px] h-fit transition-transform group overflow-hidden"
+					className="relative block md:h-[117px] h-fit text-center transition-transform w-fit group overflow-hidden"
 					onMouseOver={() => setIsHeadlineHovered(true)}
 					onMouseOut={() => setIsHeadlineHovered(false)}
 				>
-					<h1 className="mx-auto text-5xl font-black text-center cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
+					<h1 className="text-5xl font-black cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
 						<span
+							className="whitespace-pre"
 							style={{
 								// @ts-ignore
 								"--index": 1,
 							}}
 						>
-							Hyper
+							Winter{" "}
 						</span>
 						<span
+							className="whitespace-pre"
 							style={{
 								// @ts-ignore
 								"--index": 2,
 							}}
 						>
-							Edge
+							of{" "}
+						</span>
+						<span
+							style={{
+								// @ts-ignore
+								"--index": 3,
+							}}
+						>
+							Blockchain ❄️
 						</span>
 					</h1>
 					<a
@@ -41,32 +51,38 @@ export default function Home() {
 						#GetAnEdge🔺
 					</a>
 				</div>
-				<div className="flex flex-wrap gap-4">
-					<button
+				<div className="mb-6 text-justify w-96">
+					<p
 						style={{
 							// @ts-ignore
 							"--delay": "1s",
 						}}
-						className="text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+						className="text-lg font-medium text-center text-zinc-400 fade-in"
 					>
-						Join the hype 💪
-					</button>
+						Join us for a curated, exclusive{" "}
+						<span className="font-bold text-zinc-300">
+							blockchain
+						</span>{" "}
+						development experience. Coming soon.
+					</p>
+				</div>
+				<div className="flex gap-4">
 					<Link
 						style={{
 							// @ts-ignore
-							"--delay": "1.1s",
+							"--delay": "1s",
 						}}
-						href="/wob"
+						href="/"
 						className="text-lg px-4 py-2 text-yellow-200 bg-yellow-900 rounded-sm bg-opacity-40 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 					>
-						Winter of Blockchain ❄️
+						Back Home 🏠
 					</Link>
 				</div>
 			</div>
 			<div className="landing-overlay"></div>
 			<Image
-				alt="Hyperedge"
-				src="/images/landing-bg.png"
+				alt="Winter of Blockchain"
+				src="/images/wob-bg.png"
 				placeholder="blur"
 				blurDataURL="|77cT{Sg1Iay}YxF5+J8=eNuW;w{a|N]n%sUjtSM1cn*].oLACNb=d$iADjFo1X8Wor?oLS#S3ni=dW;EgjZ-AoLEgWV-AofWpaesUX8SMr?sUbbNbn%xFbHR+jZxFW;NbNHo1xZSMR*n%offkR*bGfQjajZa|bHj[n%ay"
 				quality={100}
