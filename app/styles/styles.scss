@@ -1,3 +1,54 @@
+$length: 5;
+$duration: 0.1s;
+$wait: 4s;
+$multiplier: 0.02;
+
+@mixin swipe {
+	@for $i from 1 through $length {
+		$wait-current: ($i - 1) * $wait;
+		$duration-current: (($multiplier * ($length - $i)) + $duration);
+		&:nth-child(#{$i}) {
+			@if $i == $length {
+				animation: move-in-#{$i}
+					$duration-current
+					ease
+					$wait-current
+					forwards;
+			} @else {
+				animation: move-in-#{$i}
+						$duration-current
+						ease
+						$wait-current
+						forwards,
+					move-out-#{$i}
+						$duration-current
+						ease
+						$wait-current +
+						$wait
+						forwards;
+			}
+		}
+	}
+
+	@for $i from 1 through $length {
+		@keyframes move-in-#{$i} {
+			100% {
+				opacity: 1;
+				transform: translateY(($i - 1) * -100%);
+			}
+		}
+		@keyframes move-out-#{$i} {
+			75% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				transform: translateY($i * -100%) rotate(4deg);
+			}
+		}
+	}
+}
+
 .landing-overlay {
 	animation: landing-overlay 1.5s ease forwards;
 	@apply absolute top-0 left-0 z-0 w-full h-full select-none bg-black;
@@ -57,5 +108,35 @@
 	}
 	100% {
 		opacity: 0.8;
+	}
+}
+
+.swipe-container {
+	display: block;
+	position: relative;
+	height: 1.5rem;
+	width: fit-content;
+	margin-bottom: 1rem;
+	animation: show-text 1.5s forwards;
+	text-align: center;
+	// outline: 1px solid green;
+	overflow: hidden;
+}
+
+.swipe-container > p {
+	opacity: 0;
+	white-space: nowrap;
+	@include swipe;
+}
+
+@keyframes show-text {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

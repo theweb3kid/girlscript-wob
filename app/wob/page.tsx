@@ -40,7 +40,7 @@ export default function Home() {
 									"--index": 3,
 								}}
 							>
-								Blockchain ❄️
+								Blockchain
 							</span>
 						</h1>
 						<a
@@ -74,9 +74,9 @@ export default function Home() {
 								"--delay": "1s",
 							}}
 							href="/"
-							className="text-lg px-4 py-2 text-yellow-200 bg-yellow-900 rounded-sm bg-opacity-40 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
-							Back Home 🏠
+							Back Home
 						</Link>
 					</div>
 				</div>

@@ -11,57 +11,59 @@ export default function Home() {
 	const subtextArray = [
 		{
 			text: (
-				<div className="space-y-4">
-					<p className="px-4 py-2 mx-auto border-2 rounded-full bg-rose-900 bg-opacity-20 text-rose-200 border-rose-800 w-fit backdrop-blur-md">
-						📚 Why do EdTech platforms only produce{" "}
-						<span className="inline-block font-semibold text-rose-50">
-							courses?
-						</span>
-					</p>
-					<p className="px-4 py-2 mx-auto text-pink-200 bg-pink-900 border-2 border-pink-800 rounded-full bg-opacity-20 w-fit backdrop-blur-md">
-						👥 Why is out Education System not{" "}
-						<span className="inline-block font-semibold text-pink-50">
-							community-driven?
-						</span>
-					</p>
-					<p className="px-4 py-2 mx-auto text-orange-200 bg-orange-900 border-2 border-orange-800 rounded-full bg-opacity-20 w-fit backdrop-blur-md">
-						📊 Where do you find{" "}
-						<span className="inline-block font-semibold text-orange-50">
-							Professional Network
-						</span>{" "}
-						before entering the real professional world?
-					</p>
-					<p className="px-4 py-2 mx-auto text-yellow-200 bg-yellow-900 border-2 border-yellow-800 rounded-full bg-opacity-20 w-fit backdrop-blur-md">
-						🎒 How do you add real-world{" "}
-						<span className="inline-block font-semibold text-yellow-50">
-							Work Experience
-						</span>{" "}
-						to your resume?
-					</p>
-				</div>
+				<p className="font-normal text-zinc-400">
+					Why do EdTech platforms only produce{" "}
+					<span className="inline-block font-semibold text-rose-50">
+						courses?
+					</span>
+				</p>
 			),
-			bg: "/images/hero1.png",
 		},
 		{
 			text: (
-				<p className="mx-auto text-3xl w-[32rem]">
-					We are coming up with a web2.5 platform in Q1 of 2023 to
-					bring community education into play{" "}
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						className="inline-block text-red-500"
-						fill="currentColor"
-					>
-						<path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"></path>
-					</svg>
+				<p className="font-normal text-zinc-400">
+					Why is out Education System not{" "}
+					<span className="inline-block font-semibold text-pink-50">
+						community-driven?
+					</span>
 				</p>
 			),
-			bg: "/images/hero2.png",
+		},
+		{
+			text: (
+				<p className="font-normal text-zinc-400">
+					Where do you find{" "}
+					<span className="inline-block font-semibold text-orange-50">
+						Professional Network
+					</span>{" "}
+					before entering the real professional world?
+				</p>
+			),
+		},
+		{
+			text: (
+				<p className="font-normal text-zinc-400">
+					How do you add real-world{" "}
+					<span className="inline-block font-semibold text-yellow-50">
+						Work Experience
+					</span>{" "}
+					to your resume?
+				</p>
+			),
+		},
+		{
+			text: (
+				<p className="font-normal text-zinc-400">
+					We are coming up with a web2.5 platform in Q1 of 2023 to
+					bring community education into play{" "}
+					<span className="inline-block font-semibold text-yellow-50">
+						#GetAnEdge 🔺
+					</span>
+				</p>
+			),
 		},
 	];
+
 	return (
 		<>
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
@@ -71,7 +73,7 @@ export default function Home() {
 						onMouseOver={() => setIsHeadlineHovered(true)}
 						onMouseOut={() => setIsHeadlineHovered(false)}
 					>
-						<h1 className="mx-auto text-5xl font-black text-center cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
+						<h1 className="mx-auto text-5xl font-black text-center cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit ">
 							<span
 								style={{
 									// @ts-ignore
@@ -93,10 +95,13 @@ export default function Home() {
 							href="https://twitter.com/intent/tweet?text=I'm%20ready%20to%20%23GetAnEdge%F0%9F%94%BA%20w%2F%20%40hyperedge_so%20%F0%9F%9A%80&url=http%3A%2F%2Fhyperedge.so%2F"
 							target="_blank"
 							rel="noreferrer"
-							className="hidden font-black duration-75 opacity-0 cursor-pointer md:block text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100"
+							className="hidden font-black duration-75 opacity-0 cursor-pointer md:block text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100 "
 						>
 							#GetAnEdge🔺
 						</a>
+					</div>
+					<div className="swipe-container">
+						{subtextArray.map((subtext, index) => subtext.text)}
 					</div>
 					<div className="flex flex-wrap gap-4">
 						<button
@@ -106,7 +111,7 @@ export default function Home() {
 							}}
 							className="text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
-							Join the hype 💪
+							Join the hype
 						</button>
 						<Link
 							style={{
@@ -114,9 +119,9 @@ export default function Home() {
 								"--delay": "1.1s",
 							}}
 							href="/wob"
-							className="text-lg px-4 py-2 text-yellow-200 bg-yellow-900 rounded-sm bg-opacity-40 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="text-lg px-4 py-2 text-yellow-200 border-2 bg-yellow-900 border-yellow-900 rounded-sm bg-opacity-20 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
-							Winter of Blockchain ❄️
+							Winter of Blockchain
 						</Link>
 					</div>
 					{/* <div
@@ -174,14 +179,6 @@ export default function Home() {
 					}}
 				/>
 			</section>
-			{subtextArray.map((subtext, index) => (
-				<Default
-					text={subtext.text}
-					bg={subtext.bg}
-					isEnd={index === subtextArray.length - 1}
-					key={index}
-				/>
-			))}
 			<footer className="fixed bottom-0 z-50 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
 				<a
 					href="mailto:partners@hyperedge.so"
