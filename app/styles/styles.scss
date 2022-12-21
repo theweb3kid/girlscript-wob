@@ -9,7 +9,7 @@
 		transform: translateY(10rem);
 		animation: text-animate-up calc(0.33s * var(--index)) var(--easeOutExpo)
 			forwards;
-		animation-delay: 600ms;
+		animation-delay: var(--delay, 600ms);
 		@apply inline-block leading-relaxed cursor-default;
 	}
 }
@@ -22,6 +22,15 @@
 .rotate-scale-text {
 	transition: transform 0.2s var(--easeOutExpo);
 	@apply group-hover:-rotate-2;
+}
+
+@keyframes move-up {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(1.5rem);
+	}
 }
 
 @keyframes text-animate-up {
@@ -47,6 +56,6 @@
 		opacity: 1;
 	}
 	100% {
-		opacity: 0.75;
+		opacity: 0.8;
 	}
 }
