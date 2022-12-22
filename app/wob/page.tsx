@@ -11,7 +11,7 @@ const Section = (props: any) => {
 			<div className="z-[1] relative flex flex-col items-start gap-4 p-16 my-16">
 				{props.children}
 			</div>
-			<div className="landing-overlay"></div>
+			<div className="landing-overlay md:backdrop-blur-0"></div>
 			<Image
 				alt="Winter of Blockchain"
 				src={props.bg || "/images/wob-bg.png"}
@@ -187,16 +187,26 @@ export default function Home() {
 					Project Submission
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
-					All biggest of the blockchain companies to anyone who is
-					just getting started as an entrepreneur can submit their
-					project. The only two conditions are the projects need to
-					pay a compulsory fee to get listed into the program or they
-					can even sponsor on higher levels to get more benefits out
-					of this program. This fee or sponsorship will be used for
-					running the program and rewarding the top performers. Apart
-					from this, the projects should have Github repositories open
-					for contribution with labels including tech-stack, some
-					documentation/introduction and level of development clearly.
+					<span className="underline">TL;DR</span>
+					<ul className="my-2 text-left list-disc list-inside">
+						<li>Pay the organization onboarding fee</li>
+						<li>
+							Dedicate atleast one POC for the program along with
+							open Github repositories for the participants to
+							contribute
+						</li>
+					</ul>
+					From the biggest of blockchain companies to anyone who is
+					getting started as an entrepreneur are welcome to submit
+					their project. The only two conditions are the projects need
+					to pay a compulsory fee to get listed into the program or
+					they can even sponsor on higher levels to get more benefits
+					out of this program. This fee or sponsorship will be used
+					for running the program and rewarding the top performers.
+					Apart from this, the projects should have Github
+					repositories open for contribution with labels including
+					tech-stack, some documentation/introduction and level of
+					development clearly.
 				</p>
 				<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm">
 					Looking to Volunteer? Shoot us an email on{" "}
