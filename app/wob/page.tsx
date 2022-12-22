@@ -88,16 +88,42 @@ export default function Home() {
 						></p>
 					</div>
 					<div className="flex gap-4">
-						<Link
+						<a
+							href="https://docs.google.com/forms/d/e/1FAIpQLSeLJEt65MrDsdFdaDd-tOuDi6GNAPhN5TrL_B5I-Yzv4PFO5Q/viewform"
+							target="_blank"
+							rel="noreferrer"
 							style={{
 								// @ts-ignore
 								"--delay": "1s",
 							}}
-							href="/"
-							className="text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
-							Back Home
-						</Link>
+							Mentor Application
+						</a>
+						<a
+							href="https://docs.google.com/forms/d/e/1FAIpQLSdKNcUO9lGvgHoMpEELVZ0j_fOvNr7eU5iclHNluc3Fl-WyOw/viewform"
+							target="_blank"
+							rel="noreferrer"
+							style={{
+								// @ts-ignore
+								"--delay": "1s",
+							}}
+							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-orange-100 bg-orange-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+						>
+							Mentee Application
+						</a>
+						<a
+							href="https://docs.google.com/forms/d/e/1FAIpQLSdHWePFDUoJTt-E91bKk7cKysNt_1yz0XWTIYsteEU4jBGO5g/viewform"
+							target="_blank"
+							rel="noreferrer"
+							style={{
+								// @ts-ignore
+								"--delay": "1s",
+							}}
+							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-yellow-100 bg-yellow-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+						>
+							Project Submission
+						</a>
 					</div>
 				</div>
 				<div className="landing-overlay"></div>
@@ -289,7 +315,7 @@ export default function Home() {
 					</span>
 				</div>
 			</Section>
-			<footer className="absolute bottom-0 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
+			<footer className="absolute bottom-0 z-50 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
 				<a
 					href="mailto:wob@hyperedge.so"
 					className="font-medium transition-colors hover:underline hover:text-zinc-200"
