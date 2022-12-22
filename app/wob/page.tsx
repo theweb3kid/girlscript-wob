@@ -35,13 +35,13 @@ export default function Home() {
 	return (
 		<>
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
-				<div className="z-[1] relative flex flex-col items-center gap-4 p-16">
+				<div className="z-[1] relative flex flex-col md:items-center gap-4 p-16">
 					<div
 						className="relative block md:h-[117px] h-fit text-center transition-transform w-fit group overflow-hidden"
 						onMouseOver={() => setIsHeadlineHovered(true)}
 						onMouseOut={() => setIsHeadlineHovered(false)}
 					>
-						<h1 className="text-5xl font-black cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
+						<h1 className="text-2xl font-black cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
 							<span
 								className="whitespace-pre"
 								style={{
@@ -70,24 +70,15 @@ export default function Home() {
 							</span>
 						</h1>
 						<a
-							href="https://twitter.com/intent/tweet?text=I'm%20ready%20to%20%23GetAnEdge%F0%9F%94%BA%20w%2F%20%40hyperedge_so%20%F0%9F%9A%80&url=http%3A%2F%2Fhyperedge.so%2F"
+							href="https://twitter.com/intent/tweet?text=I'm%20ready%20to%20%23GetAnEdge%F0%9F%94%BA%20w%2F%20%40hyperedge_so%20%F0%9F%9A%80%20%20Apply%20here%20%F0%9F%91%89%20https%3A%2F%2Fform.waitlistpanda.com%2Fgo%2F1LTpRXz4nBUX26zZdIfO&url=https%3A%2F%2Fhyperedge.so"
 							target="_blank"
 							rel="noreferrer"
-							className="hidden font-black duration-75 opacity-0 cursor-pointer md:block text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100"
+							className="block text-2xl font-black text-left duration-75 opacity-0 cursor-pointer select-none md:text-center md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100"
 						>
 							#GetAnEdge🔺
 						</a>
 					</div>
-					<div className="mb-6 text-justify w-[54rem]">
-						<p
-							style={{
-								// @ts-ignore
-								"--delay": "1s",
-							}}
-							className="text-lg font-medium text-center text-zinc-400 fade-in"
-						></p>
-					</div>
-					<div className="flex gap-4">
+					<div className="flex flex-col gap-4 mt-8 md:flex-row">
 						<a
 							href="https://docs.google.com/forms/d/e/1FAIpQLSeLJEt65MrDsdFdaDd-tOuDi6GNAPhN5TrL_B5I-Yzv4PFO5Q/viewform"
 							target="_blank"
@@ -96,7 +87,7 @@ export default function Home() {
 								// @ts-ignore
 								"--delay": "1s",
 							}}
-							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="w-fit group grid place-items-center h-12 relative text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
 							Mentor Application
 						</a>
@@ -108,7 +99,7 @@ export default function Home() {
 								// @ts-ignore
 								"--delay": "1s",
 							}}
-							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-orange-100 bg-orange-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="w-fit group grid place-items-center h-12 relative text-lg px-4 py-2 text-orange-100 bg-orange-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
 							Mentee Application
 						</a>
@@ -120,7 +111,7 @@ export default function Home() {
 								// @ts-ignore
 								"--delay": "1s",
 							}}
-							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-yellow-100 bg-yellow-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="w-fit group grid place-items-center h-12 relative text-lg px-4 py-2 text-yellow-100 bg-yellow-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
 							Project Submission
 						</a>
@@ -147,7 +138,7 @@ export default function Home() {
 				/>
 			</section>
 			<Section bg="/images/hero1.png">
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black leading-tight cursor-default md:text-5xl w-fit">
 					What is winter of blockchain?
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
@@ -159,14 +150,14 @@ export default function Home() {
 					opportunity for new developers to make a career in
 					Blockchain Industry.
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					Who can participate?
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
 					The program is open for anyone worldwide with 50% seats
 					reserved for diverse and underrepresented groups.
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					Mentor Application
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
@@ -176,7 +167,7 @@ export default function Home() {
 					experience with Blockchain technologies is a plus as every
 					project will have a few seats reserved for such mentors.
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					Mentee Application
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
@@ -187,7 +178,7 @@ export default function Home() {
 					Blockchain Industry so don’t worry about the details and
 					just take a leap.
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					Project Submission
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
@@ -213,7 +204,7 @@ export default function Home() {
 				</div>
 			</Section>
 			<Section bg="/images/hero2.png">
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					What Will I Receive?
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
@@ -237,7 +228,7 @@ export default function Home() {
 					well as exclusive access to the newsletter for jobs, funding
 					and more opportunities from our partners and sponsors.
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					Important Dates
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8  space-y-4">
@@ -266,7 +257,7 @@ export default function Home() {
 						Winner Announcement
 					</div>
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					What Will Happen In The Program?
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
@@ -283,7 +274,7 @@ export default function Home() {
 					We will also conduct physical meetups, workshops and
 					sessions for increasing the community interaction.
 				</p>
-				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
 					Code of Conduct
 				</h1>
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
