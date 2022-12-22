@@ -4,12 +4,38 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
+const Section = (props: any) => {
+	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
+	return (
+		<section className="relative grid min-h-screen overflow-hidden place-items-center">
+			<div className="z-[1] relative flex flex-col items-start gap-4 p-16 my-16">
+				{props.children}
+			</div>
+			<div className="landing-overlay"></div>
+			<Image
+				alt="Winter of Blockchain"
+				src={props.bg || "/images/wob-bg.png"}
+				placeholder="blur"
+				blurDataURL="|77cT{Sg1Iay}YxF5+J8=eNuW;w{a|N]n%sUjtSM1cn*].oLACNb=d$iADjFo1X8Wor?oLS#S3ni=dW;EgjZ-AoLEgWV-AofWpaesUX8SMr?sUbbNbn%xFbHR+jZxFW;NbNHo1xZSMR*n%offkR*bGfQjajZa|bHj[n%ay"
+				quality={100}
+				fill
+				sizes="100vw"
+				className="z-[-1] select-none origin-center"
+				priority
+				style={{
+					objectFit: "cover",
+				}}
+			/>
+		</section>
+	);
+};
+
 export default function Home() {
 	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
 	return (
 		<>
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
-				<div className="z-[1] relative flex flex-col items-center gap-4">
+				<div className="z-[1] relative flex flex-col items-center gap-4 p-16">
 					<div
 						className="relative block md:h-[117px] h-fit text-center transition-transform w-fit group overflow-hidden"
 						onMouseOver={() => setIsHeadlineHovered(true)}
@@ -52,20 +78,14 @@ export default function Home() {
 							#GetAnEdge🔺
 						</a>
 					</div>
-					<div className="mb-6 text-justify w-96">
+					<div className="mb-6 text-justify w-[54rem]">
 						<p
 							style={{
 								// @ts-ignore
 								"--delay": "1s",
 							}}
 							className="text-lg font-medium text-center text-zinc-400 fade-in"
-						>
-							Join us for a curated, exclusive{" "}
-							<span className="font-bold text-zinc-300">
-								blockchain
-							</span>{" "}
-							development experience. Coming soon.
-						</p>
+						></p>
 					</div>
 					<div className="flex gap-4">
 						<Link
@@ -100,6 +120,175 @@ export default function Home() {
 					}}
 				/>
 			</section>
+			<Section bg="/images/hero1.png">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					What is winter of blockchain?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					Winter of Blockchain is a 3-month long open source
+					contribution program for contributing to Blockchains and
+					Blockchain related projects like Blockchain Games,
+					Protocols, Community Platforms, DeFi and other Services and
+					Products. The program is chain-agnostic and it will give an
+					opportunity for new developers to make a career in
+					Blockchain Industry.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					Who can participate?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					The program is open for anyone worldwide with 50% seats
+					reserved for diverse and underrepresented groups.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					Mentor Application
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					The mentors should have relevant experience as a
+					professional programmer, technical writer or open-source
+					contributor in any programming language of their choice. The
+					experience with Blockchain technologies is a plus as every
+					project will have a few seats reserved for such mentors.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					Mentee Application
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					The mentees can be any beginner programmer who have written
+					some lines of code in their life. The first week of program
+					will teach you how to make open source contribution as well
+					as about what Blockchain is and how to make a career in
+					Blockchain Industry so don’t worry about the details and
+					just take a leap.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					Project Submission
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					All biggest of the blockchain companies to anyone who is
+					just getting started as an entrepreneur can submit their
+					project. The only two conditions are the projects need to
+					pay a compulsory fee to get listed into the program or they
+					can even sponsor on higher levels to get more benefits out
+					of this program. This fee or sponsorship will be used for
+					running the program and rewarding the top performers. Apart
+					from this, the projects should have Github repositories open
+					for contribution with labels including tech-stack, some
+					documentation/introduction and level of development clearly.
+				</p>
+				<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm">
+					Looking to Volunteer? Shoot us an email on{" "}
+					<a
+						className="font-semibold hover:underline"
+						href="mailto:wob@hyperedge.so"
+					>
+						wob@hyperedge.so
+					</a>
+				</div>
+			</Section>
+			<Section bg="/images/hero2.png">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					What Will I Receive?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					Top 5 contributors [mentors and mentees] for overall program
+					will win a cash prize and a free ticket to Web3Conf in Goa,
+					India alongwith travel allowance, accomodation and a chance
+					to be a part of panel discussion on stage.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					Top 100 and most consistent mentees will receive an
+					exclusive swag kit plus a “Proof of Knowledge” NFT.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					The top 100 and most consistent mentors will receive an
+					exclusive swag kit plus a “Proof of Contribution” NFT and
+					priority in call for speaker application at Web3Conf India.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					All participants who make atleast 3 contributions in the
+					program will win an NFT certificate for participation as
+					well as exclusive access to the newsletter for jobs, funding
+					and more opportunities from our partners and sponsors.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					Important Dates
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8  space-y-4">
+					<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							21 Dec, 2022{" "}
+						</span>
+						Call for mentor, mentees and projects/sponsors begin
+					</div>
+					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							15 Jan, 2023{" "}
+						</span>
+						Program Begins
+					</div>
+					<div className="p-4 font-medium bg-orange-900 border-2 border-orange-400 rounded-sm text-orange-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							15 Mar, 2023{" "}
+						</span>
+						Program Ends
+					</div>
+					<div className="p-4 font-medium bg-orange-900 border-2 border-yellow-400 rounded-sm text-yellow-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							1st Week of April, 2023:{" "}
+						</span>
+						Winner Announcement
+					</div>
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					What Will Happen In The Program?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					The mentors will be coordinating with different project
+					administrators and help mentees in making a successful
+					contribution to the repositories.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					There will be special speaker sessions, pop-up events with
+					blockchain experts, contest and giveaway in between to cheer
+					the mentees and teach them new skills.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					We will also conduct physical meetups, workshops and
+					sessions for increasing the community interaction.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl text-animate-up rotate-scale-text w-fit">
+					Code of Conduct
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					Everyone who is part of this program directly or indirectly
+					will need to sign a code of conduct document at the
+					beginning of their onboarding as we believe in equal
+					opportunities and creating a safer environment for everyone
+					to learn and growth together. This is a 100% virtual program
+					and any kind of verbal or written harassment, inappropriate
+					or discriminatory behavior would result in exemption from
+					this and all of our future programs.
+				</p>
+				<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm max-w-[48rem] ">
+					The program is inspired by{" "}
+					<span className="text-xl font-semibold text-white">
+						GirlScript Summer of Code’s{" "}
+					</span>
+					success for last{" "}
+					<span className="text-xl font-semibold text-white">
+						5 years{" "}
+					</span>
+					with over{" "}
+					<span className="text-xl font-semibold text-white">
+						8,000{" "}
+					</span>
+					developers in 2022 edition from{" "}
+					<span className="text-xl font-semibold text-white">
+						14+ countries.
+					</span>
+				</div>
+			</Section>
 			<footer className="absolute bottom-0 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
 				<a
 					href="mailto:wob@hyperedge.so"

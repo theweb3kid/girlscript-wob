@@ -70,7 +70,10 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="flex flex-wrap gap-4">
-						<button
+						<a
+							href="https://form.waitlistpanda.com/go/1LTpRXz4nBUX26zZdIfO"
+							target="_blank"
+							rel="noreferrer"
 							style={{
 								// @ts-ignore
 								"--delay": "1s",
@@ -78,7 +81,7 @@ export default function Home() {
 							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
 							Join the hype
-						</button>
+						</a>
 						<Link
 							style={{
 								// @ts-ignore
