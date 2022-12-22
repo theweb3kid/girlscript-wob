@@ -116,10 +116,10 @@ export default function Home() {
 			</section>
 			<footer className="fixed bottom-0 z-50 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
 				<a
-					href="mailto:partners@hyperedge.so"
+					href="mailto:partnerships@hyperedge.so"
 					className="font-medium transition-colors hover:underline hover:text-zinc-200"
 				>
-					partners@hyperedge.so
+					partnerships@hyperedge.so
 				</a>
 				<span className="whitespace-pre text-zinc-600"> | </span>
 				<a
