@@ -287,10 +287,10 @@ export default function Home() {
 					will need to sign a code of conduct document at the
 					beginning of their onboarding as we believe in equal
 					opportunities and creating a safer environment for everyone
-					to learn and growth together. This is a 100% virtual program
-					and any kind of verbal or written harassment, inappropriate
-					or discriminatory behavior would result in exemption from
-					this and all of our future programs.
+					to grow together. This is a 100% virtual program and any
+					kind of verbal or written harassment, inappropriate or
+					discriminatory behaviour would result in exemption from this
+					and all of our future programs.
 				</p>
 				<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm max-w-[48rem] ">
 					The program is inspired by{" "}
@@ -311,7 +311,7 @@ export default function Home() {
 					</span>
 				</div>
 			</Section>
-			<footer className="absolute bottom-0 z-50 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
+			<footer className="z-50 flex items-center justify-center w-full p-4 py-6 bg-zinc-900 text-zinc-400">
 				<a
 					href="mailto:wob@hyperedge.so"
 					className="font-medium transition-colors hover:underline hover:text-zinc-200"
