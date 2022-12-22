@@ -5,7 +5,6 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ["Satoshi", "Avenir", "Helvetica", "Arial", "sans-serif"],
-				headline: ["Anton", "sans-serif"],
 			},
 		},
 	},

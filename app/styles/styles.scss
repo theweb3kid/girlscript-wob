@@ -120,13 +120,14 @@ $multiplier: 0.02;
 	animation: show-text 1.5s forwards;
 	text-align: center;
 	// outline: 1px solid green;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .swipe-container > p {
 	opacity: 0;
 	white-space: nowrap;
 	@include swipe;
+	@apply mx-auto text-5xl font-black text-center cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit;
 }
 
 @keyframes show-text {
