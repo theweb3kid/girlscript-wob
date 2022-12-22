@@ -30,12 +30,12 @@ export default function Home() {
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
 				<div className="z-[1] relative flex flex-col p-8 md:items-center items-start gap-4 max-w-[100vw] ">
 					<div
-						className="relative block overflow-hidden text-center transition-transform h-fit group"
+						className="relative block overflow-hidden text-left transition-transform md:text-center h-fit group"
 						onMouseOver={() => setIsHeadlineHovered(true)}
 						onMouseOut={() => setIsHeadlineHovered(false)}
 					>
 						<div
-							className="my-6 text-5xl font-black text-zinc-50 fade-in"
+							className="my-6 text-3xl font-black md:text-5xl text-zinc-50 fade-in"
 							style={{
 								// @ts-ignore
 								"--delay": "1s",
