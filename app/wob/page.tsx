@@ -41,7 +41,7 @@ export default function Home() {
 						onMouseOver={() => setIsHeadlineHovered(true)}
 						onMouseOut={() => setIsHeadlineHovered(false)}
 					>
-						<h1 className="text-2xl font-black cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
+						<h1 className="text-3xl font-black cursor-default md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
 							<span
 								className="whitespace-pre"
 								style={{
@@ -73,12 +73,12 @@ export default function Home() {
 							href="https://twitter.com/intent/tweet?text=I'm%20ready%20to%20%23GetAnEdge%F0%9F%94%BA%20w%2F%20%40hyperedge_so%20%F0%9F%9A%80%20%20Apply%20here%20%F0%9F%91%89%20https%3A%2F%2Fform.waitlistpanda.com%2Fgo%2F1LTpRXz4nBUX26zZdIfO&url=https%3A%2F%2Fhyperedge.so"
 							target="_blank"
 							rel="noreferrer"
-							className="block text-2xl font-black text-left duration-75 opacity-0 cursor-pointer select-none md:text-center md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100"
+							className="block text-3xl font-black text-center duration-75 opacity-0 cursor-pointer select-none md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100"
 						>
 							#GetAnEdge🔺
 						</a>
 					</div>
-					<div className="flex flex-col gap-4 mt-8 md:flex-row">
+					<div className="flex flex-col items-center gap-4 md:mt-8 md:flex-row">
 						<a
 							href="https://docs.google.com/forms/d/e/1FAIpQLSeLJEt65MrDsdFdaDd-tOuDi6GNAPhN5TrL_B5I-Yzv4PFO5Q/viewform"
 							target="_blank"
@@ -115,6 +115,11 @@ export default function Home() {
 						>
 							Project Submission
 						</a>
+					</div>
+				</div>
+				<div className="absolute bottom-0 mb-16 scroll-down z-[60] scale-75 text-zinc-400">
+					<div>
+						<span></span>Scroll
 					</div>
 				</div>
 				<div className="landing-overlay"></div>
