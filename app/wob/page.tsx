@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Navbar from "@/Navbar";
 
 const Section = (props: any) => {
 	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
@@ -32,8 +33,10 @@ const Section = (props: any) => {
 
 export default function Home() {
 	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
+
 	return (
 		<>
+			<Navbar />
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
 				<div className="z-[1] relative flex flex-col md:items-center gap-4 p-16">
 					<div

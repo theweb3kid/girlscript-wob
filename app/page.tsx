@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
+import Navbar from "@/Navbar";
 
 export default function Home() {
 	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
@@ -27,6 +28,7 @@ export default function Home() {
 
 	return (
 		<>
+			<Navbar />
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
 				<div className="z-[1] relative flex flex-col p-8 md:items-center items-start gap-4 max-w-[100vw] ">
 					<div
