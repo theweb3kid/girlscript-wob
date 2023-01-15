@@ -258,6 +258,12 @@ export default function Home() {
 					</div>
 					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
 						<span className="font-bold text-white">
+							31 Jan, 2023{" "}
+						</span>
+						Application Deadline Extended
+					</div>
+					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
 							15 Jan, 2023{" "}
 						</span>
 						Program Begins
