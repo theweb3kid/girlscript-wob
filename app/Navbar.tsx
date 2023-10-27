@@ -20,8 +20,8 @@ const Navbar: NextPage = () => {
 							alt="GirlScript Logo"
 							src="/images/logo.png"
 							className="overflow-hidden rounded-lg"
-							width={48}
-							height={48}
+							width={200}
+							height={300}
 						/>
 					</Link>
 				</nav>
