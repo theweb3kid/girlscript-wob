@@ -17,13 +17,12 @@ const Navbar: NextPage = () => {
 				<nav className="px-8 py-6">
 					<Link href="/" className="flex items-center gap-4">
 						<Image
-							alt="Hyperedge logo"
+							alt="GirlScript Logo"
 							src="/images/logo.png"
 							className="overflow-hidden rounded-lg"
 							width={48}
 							height={48}
 						/>
-						<span className="text-3xl font-bold">Hyperedge</span>
 					</Link>
 				</nav>
 			</header>

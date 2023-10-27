@@ -1,105 +1,133 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import Link from "next/link";
-import Typewriter from "typewriter-effect";
+import { useState, useEffect } from "react";
 import Navbar from "@/Navbar";
+
+const Section = (props: any) => {
+	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
+	return (
+		<section className="relative grid min-h-screen overflow-hidden place-items-center">
+			<div className="z-[1] relative flex flex-col items-start gap-4 p-16 my-16">
+				{props.children}
+			</div>
+			<div className="landing-overlay md:backdrop-blur-0"></div>
+			<Image
+				alt="Winter of Blockchain"
+				src={props.bg || "/images/wob-bg.png"}
+				placeholder="blur"
+				blurDataURL="|77cT{Sg1Iay}YxF5+J8=eNuW;w{a|N]n%sUjtSM1cn*].oLACNb=d$iADjFo1X8Wor?oLS#S3ni=dW;EgjZ-AoLEgWV-AofWpaesUX8SMr?sUbbNbn%xFbHR+jZxFW;NbNHo1xZSMR*n%offkR*bGfQjajZa|bHj[n%ay"
+				quality={100}
+				fill
+				sizes="100vw"
+				className="z-[-1] select-none origin-center"
+				priority
+				style={{
+					objectFit: "cover",
+				}}
+			/>
+		</section>
+	);
+};
 
 export default function Home() {
 	const [isHeadlineHovered, setIsHeadlineHovered] = useState(false);
-	const subtextArray = [
-		{
-			text: "Why do EdTech platforms only produce courses?",
-		},
-		{
-			text: "Why is our Education System not community-driven?",
-		},
-		{
-			text: "Where do you find Professional Network before entering the real professional world?",
-		},
-		{
-			text: "How do you add real-world Work Experience to your resume?",
-		},
-		{
-			text: "We are coming up with a web2.5 platform in Q1 of 2023 to bring community education into play #GetAnEdge 🔺",
-		},
-	];
 
 	return (
 		<>
 			<Navbar />
 			<section className="relative grid min-h-screen overflow-hidden place-items-center">
-				<div className="z-[1] relative flex flex-col p-8 md:items-center items-start gap-4 max-w-[100vw] ">
+				<div className="z-[1] relative flex flex-col md:items-center gap-4 p-16">
 					<div
-						className="relative block overflow-hidden text-left transition-transform md:text-center h-fit group"
+						className="relative block md:h-[117px] w-[100%] h-fit items-center text-center transition-transform group overflow-hidden"
 						onMouseOver={() => setIsHeadlineHovered(true)}
 						onMouseOut={() => setIsHeadlineHovered(false)}
 					>
-						<div
-							className="my-6 text-3xl font-black md:text-5xl text-zinc-50 fade-in"
-							style={{
-								// @ts-ignore
-								"--delay": "1s",
-							}}
-						>
-							<Typewriter
-								options={{
-									delay: 45,
-									autoStart: true,
-									cursor: "_",
+						<h1 className="text-3xl font-black cursor-default text-center md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-0 w-fit">
+							<span
+								className="whitespace-pre"
+								style={{
+									// @ts-ignore
+									"--index": 1,
 								}}
-								onInit={typewriter => {
-									typewriter
-
-										.typeString(subtextArray[0].text)
-
-										.pauseFor(1000)
-										.deleteAll(20)
-										.typeString(subtextArray[1].text)
-										.pauseFor(1000)
-										.deleteAll(20)
-										.typeString(subtextArray[2].text)
-										.pauseFor(1000)
-										.deleteAll(20)
-										.typeString(subtextArray[3].text)
-										.pauseFor(1000)
-										.deleteAll(20)
-										.typeString(subtextArray[4].text)
-										.start();
+							>
+								Winter{" "}
+							</span>
+							<span
+								className="whitespace-pre"
+								style={{
+									// @ts-ignore
+									"--index": 2,
 								}}
-							/>
-						</div>
-					</div>
-					<div className="flex flex-wrap gap-4">
+							>
+								of{" "}
+							</span>
+							<span
+								style={{
+									// @ts-ignore
+									"--index": 3,
+								}}
+							>
+								Blockchain
+							</span>
+						</h1>
 						<a
-							href="https://form.waitlistpanda.com/go/1LTpRXz4nBUX26zZdIfO"
+							href="https://twitter.com/intent/tweet?text=I'm%20ready%20to%20%23GetAnEdge%F0%9F%94%BA%20w%2F%20%40hyperedge_so%20%F0%9F%9A%80%20%20Apply%20here%20%F0%9F%91%89%20https%3A%2F%2Fform.waitlistpanda.com%2Fgo%2F1LTpRXz4nBUX26zZdIfO&url=https%3A%2F%2Fhyperedge.so"
+							target="_blank"
+							rel="noreferrer"
+							className="block text-3xl font-black text-center duration-75 opacity-0 cursor-pointer select-none md:text-7xl text-animate-up rotate-scale-text group-hover:-translate-y-full group-hover:opacity-100"
+						>
+							1500+ Devs in 2022!
+						</a>
+					</div>
+					<div className="flex flex-col items-center gap-4 md:mt-8 md:flex-row">
+						<a
+							href="https://forms.gle/CcSMhqRwiCjwpmpg6"
 							target="_blank"
 							rel="noreferrer"
 							style={{
 								// @ts-ignore
 								"--delay": "1s",
 							}}
-							className="group grid place-items-center h-12 relative text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="w-fit group grid place-items-center h-12 relative text-lg px-4 py-2 text-rose-100 bg-rose-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
-							Join the hype
+							Mentor Application
 						</a>
-						<Link
+						<a
+							href="https://forms.gle/Fu8G2chcW33Ji26d8"
+							target="_blank"
+							rel="noreferrer"
 							style={{
 								// @ts-ignore
-								"--delay": "1.1s",
+								"--delay": "1s",
 							}}
-							href="/wob"
-							className="text-lg px-4 py-2 text-yellow-200 border-2 bg-yellow-900 border-yellow-900 rounded-sm bg-opacity-20 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+							className="w-fit group grid place-items-center h-12 relative text-lg px-4 py-2 text-orange-100 bg-orange-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
 						>
-							Winter of Blockchain
-						</Link>
+							Mentee Application
+						</a>
+						<a
+							href="https://forms.gle/z2CtT8UDwbrd4LKN6"
+							target="_blank"
+							rel="noreferrer"
+							style={{
+								// @ts-ignore
+								"--delay": "1s",
+							}}
+							className="w-fit group grid place-items-center h-12 relative text-lg px-4 py-2 text-yellow-100 bg-yellow-800 rounded-sm bg-opacity-60 backdrop-blur-lg transition-transform ease-[var(--easeOutExpo)] hover:scale-125 hover:-rotate-2 shadow-lg hover:z-10 fade-in"
+						>
+							Project Submission
+						</a>
+					</div>
+				</div>
+				<div className="absolute bottom-0 mb-16 scroll-down z-[60] scale-75 text-zinc-400">
+					<div>
+						<span></span>Scroll
 					</div>
 				</div>
 				<div className="landing-overlay"></div>
 				<Image
-					alt="Hyperedge"
-					src="/images/landing-bg.png"
+					alt="Winter of Blockchain"
+					src="/images/wob-bg.png"
 					placeholder="blur"
 					blurDataURL="|77cT{Sg1Iay}YxF5+J8=eNuW;w{a|N]n%sUjtSM1cn*].oLACNb=d$iADjFo1X8Wor?oLS#S3ni=dW;EgjZ-AoLEgWV-AofWpaesUX8SMr?sUbbNbn%xFbHR+jZxFW;NbNHo1xZSMR*n%offkR*bGfQjajZa|bHj[n%ay"
 					quality={100}
@@ -116,12 +144,196 @@ export default function Home() {
 					}}
 				/>
 			</section>
-			<footer className="fixed bottom-0 z-50 flex items-center justify-center w-full p-4 bg-gradient-to-b from-transparent to-black text-zinc-400">
+			<Section bg="/images/hero1.png">
+				<h1 className="text-3xl font-black leading-tight cursor-default md:text-5xl w-fit">
+					What is winter of blockchain?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					Winter of Blockchain is a 3-month long open source
+					contribution program for contributing to Blockchains and
+					Blockchain related projects like Blockchain Games,
+					Protocols, Community Platforms, DeFi and other Services and
+					Products. The program is chain-agnostic and it will give an
+					opportunity for new developers to make a career in
+					Blockchain Industry.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					Who can participate?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					The program is open for anyone worldwide with 50% seats
+					reserved for diverse and underrepresented groups.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					Mentor Application
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					The mentors should have relevant experience as a
+					professional programmer, technical writer or open-source
+					contributor in any programming language of their choice. The
+					experience with Blockchain technologies is a plus as every
+					project will have a few seats reserved for such mentors.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					Mentee Application
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					The mentees can be any beginner programmer who have written
+					some lines of code in their life. The first week of program
+					will teach you how to make open source contribution as well
+					as about what Blockchain is and how to make a career in
+					Blockchain Industry so don’t worry about the details and
+					just take a leap.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					Project Submission
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					<span className="underline">TL;DR</span>
+					<ul className="my-2 text-left list-disc list-inside">
+						<li>
+							Dedicate atleast one POC for the program along with
+							open Github repositories for the participants to
+							contribute
+						</li>
+					</ul>
+					From the biggest of blockchain companies to anyone who is
+					getting started as an entrepreneur are welcome to submit
+					their project. The only two conditions are the projects need
+					to pay a compulsory fee to get listed into the program or
+					they can even sponsor on higher levels to get more benefits
+					out of this program. This fee or sponsorship will be used
+					for running the program and rewarding the top performers.
+					Apart from this, the projects should have Github
+					repositories open for contribution with labels including
+					tech-stack, some documentation/introduction and level of
+					development clearly.
+				</p>
+				<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm">
+					Looking to Volunteer? Shoot us an email on{" "}
+					<a
+						className="font-semibold hover:underline"
+						href="mailto:wob@girlscript.tech"
+					>
+						wob@girlscript.tech
+					</a>
+				</div>
+			</Section>
+			<Section bg="/images/hero2.png">
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					What Will I Receive?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					Top 5 contributors [mentors and mentees] for overall program
+					will win a cash prize and a free ticket to Web3Conf in Goa,
+					India alongwith travel allowance, accomodation and a chance
+					to be a part of panel discussion on stage.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					Top 100 and most consistent mentees will receive an
+					exclusive swag kit plus a “Proof of Knowledge” NFT.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					The top 100 and most consistent mentors will receive an
+					exclusive swag kit plus a “Proof of Contribution” NFT and
+					priority in call for speaker application at Web3Conf India.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					All participants who make atleast 3 contributions in the
+					program will win an NFT certificate for participation as
+					well as exclusive access to the newsletter for jobs, funding
+					and more opportunities from our partners and sponsors.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					Important Dates
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8  space-y-4">
+					<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							31 Oct, 2023{" "}
+						</span>
+						Call for mentor, mentees and projects/sponsors begin
+					</div>
+					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							30 Nov, 2023{" "}
+						</span>
+						Application Deadline
+					</div>
+					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							15 Dec, 2023{" "}
+						</span>
+						Program Begins
+					</div>
+					<div className="p-4 font-medium bg-orange-900 border-2 border-orange-400 rounded-sm text-orange-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							15 Mar, 2024{" "}
+						</span>
+						Program Ends
+					</div>
+					<div className="p-4 font-medium bg-orange-900 border-2 border-yellow-400 rounded-sm text-yellow-50 bg-opacity-20 backdrop-blur-sm w-fit">
+						<span className="font-bold text-white">
+							1st Week of April, 2024:{" "}
+						</span>
+						Winner Announcement
+					</div>
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					What Will Happen In The Program?
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					The mentors will be coordinating with different project
+					administrators and help mentees in making a successful
+					contribution to the repositories.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-2 ">
+					There will be special speaker sessions, pop-up events with
+					blockchain experts, contest and giveaway in between to cheer
+					the mentees and teach them new skills.
+				</p>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					We will also conduct physical meetups, workshops and
+					sessions for increasing the community interaction.
+				</p>
+				<h1 className="text-3xl font-black cursor-default md:text-5xl w-fit">
+					Code of Conduct
+				</h1>
+				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8 ">
+					Everyone who is part of this program directly or indirectly
+					will need to sign a code of conduct document at the
+					beginning of their onboarding as we believe in equal
+					opportunities and creating a safer environment for everyone
+					to grow together. This is a 100% virtual program and any
+					kind of verbal or written harassment, inappropriate or
+					discriminatory behaviour would result in exemption from this
+					and all of our future programs.
+				</p>
+				<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm max-w-[48rem] ">
+					The program is inspired by{" "}
+					<span className="text-xl font-semibold text-white">
+						GirlScript Summer of Code’s{" "}
+					</span>
+					success for last{" "}
+					<span className="text-xl font-semibold text-white">
+						6 years{" "}
+					</span>
+					with over{" "}
+					<span className="text-xl font-semibold text-white">
+						18,000{" "}
+					</span>
+					developers in 2022 edition from{" "}
+					<span className="text-xl font-semibold text-white">
+						14+ countries.
+					</span>
+				</div>
+			</Section>
+			<footer className="z-50 flex items-center justify-center w-full p-4 py-6 bg-zinc-900 text-zinc-400">
 				<a
-					href="mailto:partnerships@hyperedge.so"
+					href="mailto:wob@girlscript.tech"
 					className="font-medium transition-colors hover:underline hover:text-zinc-200"
 				>
-					partnerships@hyperedge.so
+					wob@girlscript.tech
 				</a>
 				<span className="whitespace-pre text-zinc-600"> | </span>
 				<a
