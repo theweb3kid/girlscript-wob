@@ -82,7 +82,7 @@ export default function Home() {
 					</div>
 					<div className="flex flex-col items-center gap-4 md:mt-8 md:flex-row">
 						<a
-							href="https://forms.gle/CcSMhqRwiCjwpmpg6"
+							href="https://docs.google.com/forms/d/1HyG-uvKC8WlXc30zL4ajA5OLlG25IWAdh6jhtvZAClg/"
 							target="_blank"
 							rel="noreferrer"
 							style={{
@@ -94,7 +94,7 @@ export default function Home() {
 							Mentor Application
 						</a>
 						<a
-							href="https://docs.google.com/forms/d/10644ctiHP_TWvHIwAETIHLIZRR6ssaNhKcgDhiPPs_0/viewform?chromeless=1&edit_requested=true"
+							href="https://docs.google.com/forms/d/10644ctiHP_TWvHIwAETIHLIZRR6ssaNhKcgDhiPPs_0/"
 							target="_blank"
 							rel="noreferrer"
 							style={{
