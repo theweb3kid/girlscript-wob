@@ -94,7 +94,7 @@ export default function Home() {
 							Mentor Application
 						</a>
 						<a
-							href="https://forms.gle/Fu8G2chcW33Ji26d8"
+							href="https://docs.google.com/forms/d/10644ctiHP_TWvHIwAETIHLIZRR6ssaNhKcgDhiPPs_0/viewform?chromeless=1&edit_requested=true"
 							target="_blank"
 							rel="noreferrer"
 							style={{
