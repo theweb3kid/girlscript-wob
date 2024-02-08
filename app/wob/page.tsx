@@ -252,31 +252,32 @@ export default function Home() {
 				<p className="text-lg font-medium text-justify text-zinc-300 max-w-[48rem] mb-8  space-y-4">
 					<div className="p-4 font-medium bg-red-900 border-2 border-red-400 rounded-sm text-red-50 bg-opacity-20 backdrop-blur-sm w-fit">
 						<span className="font-bold text-white">
-							21 Dec, 2022{" "}
+							5 Dec, 2023{" "}
 						</span>
 						Call for mentor, mentees and projects/sponsors begin
+
 					</div>
 					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
 						<span className="font-bold text-white">
-							31 Jan, 2023{" "}
+							15 Feb, 2024{" "}
 						</span>
-						Application Deadline Extended
+						Application Deadline
 					</div>
 					<div className="p-4 font-medium border-2 rounded-sm bg-rose-900 border-rose-400 text-rose-50 bg-opacity-20 backdrop-blur-sm w-fit">
 						<span className="font-bold text-white">
-							15 Jan, 2023{" "}
+							15 Feb, 2023{" "}
 						</span>
 						Program Begins
 					</div>
 					<div className="p-4 font-medium bg-orange-900 border-2 border-orange-400 rounded-sm text-orange-50 bg-opacity-20 backdrop-blur-sm w-fit">
 						<span className="font-bold text-white">
-							15 Mar, 2023{" "}
+							15 Apr, 2024{" "}
 						</span>
 						Program Ends
 					</div>
 					<div className="p-4 font-medium bg-orange-900 border-2 border-yellow-400 rounded-sm text-yellow-50 bg-opacity-20 backdrop-blur-sm w-fit">
 						<span className="font-bold text-white">
-							1st Week of April, 2023:{" "}
+							1st Week of May, 2024:{" "}
 						</span>
 						Winner Announcement
 					</div>
